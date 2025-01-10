@@ -1,5 +1,27 @@
 .hero-nav{
     .navbar-collapse{
         gap: 24px;
+        text-align: center;
+    }
+
+
+    .navbar-nav{
+        .nav-link{
+            font-weight: 500;
+            padding: .5em 1em;
+            &:hover{
+                color: $primary-color;
+            }
+            &.active{
+                font-weight: 700;
+                color: $primary-color;
+
+            }
+        }
+    }
+
+    .navbar-toggler{
+        border: 0px;
+        box-shadow: unset !important;
     }
 }

@@ -36,7 +36,7 @@ $text-color: $white-color;
 
 
             .input-group {
-                max-width: $banner-height;
+                max-width: calc($banner-height + 10%);
                 margin: 0px auto;
                 padding: 5px;
                 background-color: $white-color;
@@ -45,10 +45,12 @@ $text-color: $white-color;
 
                 .form-control{
                     border: none;
+                    padding: 1em;
                 }
 
                 .btn{
                     border-radius: .375em !important;
+                    padding-inline: 1.5em;
                 }
             }
 

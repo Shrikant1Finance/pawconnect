@@ -3,3 +3,8 @@
 *{
     font-family: 'Inter';
 }
+
+
+.form-control:focus, .btn:focus-visible{
+    box-shadow: unset;
+}

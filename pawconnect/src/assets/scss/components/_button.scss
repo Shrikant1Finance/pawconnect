@@ -1,9 +1,10 @@
 
 .btn{
+    padding: .5em 1em;
     &-primary{
         background-color: $primary-color;
         &:hover{
-            background-color: darken($primary-color, 5%)
+            background-color: $dark-blue-color;
         }
     }
 
