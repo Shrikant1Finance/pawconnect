@@ -1,0 +1,24 @@
+
+<div class="container light-gray mt-md-4">
+    <div class="heading-center">
+        <h2>Pets Looking for a Home</h2>
+        <p>Meet some of our adorable friends waiting for their forever homes</p>
+    </div>
+
+
+    <section class="pet-card-container my-4">
+        <div class="row row-cols-1 row-cols-lg-4 row-cols-md-3 row-cols-sm-2 row-cols-xs-1   g-4">
+            <div class="col" *ngFor="let item of items; let i = index" >
+              <div class="card">
+                <img src="../../assets/img/pets/pet{{i+1}}.avif" class="card-img-top" alt="pet{{i+1}}">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                </div>
+              </div>
+            </div>
+        </div>
+    </section>
+
+
+</div>

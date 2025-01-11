@@ -1,0 +1,14 @@
+
+
+
+.heading-center{
+    display: flex;
+    gap: .5em;
+    flex-direction: column;
+    align-items: center;
+    padding-block: 2rem;
+
+    h2,p{
+        margin: 0px;
+    }
+}

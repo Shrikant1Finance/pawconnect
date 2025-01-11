@@ -29,5 +29,78 @@
       <span class="carousel-control-next-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Next</span>
     </button>
-  </div>
+</div>
+
+<div class="container">
+    <div class="heading-center my-5">
+        <h2>Everything you need in one place</h2>
+        <p>A comprehensive platform for animal welfare and healthcare</p>
+    </div>
+
+    <div class="row service-container">
+        <div class="col-12 col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <div class="icon-box">
+                        <i class="fa-regular fa-heart"></i>
+                    </div>
+                    <h5 class="card-title">Pet Adoption</h5>
+                    <p>Find your perfect companion from our network of verified shelters and rescue centers.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <div class="icon-box">
+                        <i class="fa-solid fa-stethoscope"></i>
+                    </div>
+                    <h5 class="card-title">Health Detection</h5>
+                    <p>AI-powered disease detection and direct access to veterinary professionals.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <div class="icon-box">
+                        <i class="fa-solid fa-paw"></i>
+                    </div>
+                    <h5 class="card-title">NGO Integration</h5>
+                    <p>Support and collaborate with animal welfare organizations in your community.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="heading-center my-5">
+        <h2>Pets Looking for a Home</h2>
+        <p>Meet some of our adorable friends waiting for their forever homes</p>
+    </div>
+
+
+    <section class="pet-card-container my-5">
+        <div class="row row-cols-1 row-cols-lg-4 row-cols-md-3 row-cols-sm-2 row-cols-xs-1   g-4">
+            <div class="col" *ngFor="let item of items; let i = index" >
+              <div class="card">
+                <img src="../../assets/img/pets/{{item.imgurl}}" class="card-img-top" alt="{{item.imgurl}}">
+                <div class="card-body">
+                  <h6 class="card-title">{{item.name}}</h6>
+                  <p class="card-text">{{item.breed}}</p>
+                  <p class="card-text">{{item.age}}</p>
+                  <button class="btn btn-primary w-100 mt-3">See More</button>
+                </div>
+              </div>
+            </div>
+        </div>
+    </section>
+
+
+    <br><br>
+</div>
+
+
+
+
   

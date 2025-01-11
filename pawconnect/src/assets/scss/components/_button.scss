@@ -6,6 +6,11 @@
         &:hover{
             background-color: $dark-blue-color;
         }
+
+        &:disabled{
+            background-color: #ccc;
+            border-color: #ccc;
+        }
     }
 
     

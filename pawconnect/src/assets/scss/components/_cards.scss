@@ -1,0 +1,139 @@
+
+.pet-card-container{
+    .card{
+        border: 0px;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+        transition: 0.5s;
+        &:hover{
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+        }
+        &-img-top{
+            height: 180px;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .card-body{
+           padding: 1rem;
+
+           p{
+                margin: 0px;
+                font-size: 14px;
+                color: $gray-color;
+           }
+        }
+    }
+}
+
+
+.uploadimage-section{
+    .card{
+        .card-title{
+            display: flex ;
+            gap: 10px;
+            margin-bottom: 1em;    
+            font-weight: 500;
+
+            .fa-solid{
+                color: $primary-color;
+            }
+        }
+
+        .file-container{
+            width: 100%;
+            border: 2px dashed #c7c7c7;
+            background-color: #d1d5db28;
+            border-radius: 1em;
+            position: relative;
+            cursor: pointer;
+
+            .text-in-bg{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                opacity: .5;
+            }
+            .file{
+                opacity: 0;
+                padding: 5rem;
+                width: 100%;
+                height: 5rem;
+            }
+        }
+
+        .file-priview{
+            display: flex;
+            align-items: center;
+            gap: 1em;
+            margin-top: 1em;
+            background-color: #d1d5db28;
+            padding: 1em;
+            border: 2px solid #c7c7c7;
+            border-radius: 1em;
+            position: relative;
+
+            .btn-close{
+                background-color: #f3f4f6;
+                border: 0px;
+                border-radius: 50%;
+                padding: .5em;
+                cursor: pointer;
+                transition: 0.5s;
+                position: absolute;
+                top:10px;
+                right: 10px;
+                &:hover{
+                    background-color: #e5e7eb;
+                }
+            }
+
+
+            img{
+                width: 250px;
+                max-height: 400px;
+                object-fit: cover;
+                border-radius: 1em;
+            }
+
+            .file-info{
+                display: flex;
+                flex-direction: column;
+                gap: 1em;
+                .file-name{
+                    font-weight: 500;
+                }
+                .file-size{
+                    font-size: .8em;
+                }
+            }
+        }
+    }
+}
+
+
+.service-container{
+    .card{
+        border: 0px;
+        background-color: transparent;
+
+        .icon-box{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: $primary-color;
+            border-radius: .5em;
+            color: $white-color;
+            width: 60px;
+            height: 60px;
+            margin-bottom: 1.5rem;
+            i{
+                font-size: 1.5em;
+            }
+        }  
+        
+        .card-title{
+            font-size: 1.5rem;
+        }
+    }
+}

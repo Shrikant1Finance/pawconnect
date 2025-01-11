@@ -1,7 +1,7 @@
 
-<nav class="navbar navbar-expand-lg bg-white hero-nav">
+<nav class="navbar navbar-expand-lg bg-white hero-nav sticky-top">
   <div class="container">
-      <a class="navbar-brand" href="#">
+      <a class="navbar-brand" routerLink="/home">
           <img src="../assets/img/pawconnect_logo.svg" alt="PawCare Logo" height="30"> 
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -10,19 +10,19 @@
       <div class="collapse navbar-collapse justify-content-end row-gap-3" id="navbarNav">
           <ul class="navbar-nav">
               <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#">Find a Pet</a>
+                  <a class="nav-link"  routerLink="/findpet" routerLinkActive="active">Find a Pet</a>
               </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="#">Health Check</a>
+              <li class="nav-item" >
+                <a class="nav-link" routerLink="/ngos" routerLinkActive="active">NGOs</a>
               </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="#">NGOs</a>
+              <li class="nav-item" >
+                <a class="nav-link" routerLink="/vets" routerLinkActive="active">Vets</a>
               </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="#">Vets</a>
+              <li class="nav-item" >
+                  <a class="btn btn-primary" routerLink="/health-check" routerLinkActive="active">Health Check</a>
               </li>
           </ul>
-          <a class="btn btn-primary" href="#" role="button">Sign In</a>
+          
       </div>
   </div>
 </nav>

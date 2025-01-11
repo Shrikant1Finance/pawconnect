@@ -5,6 +5,20 @@
 }
 
 
+body{
+    background-color: $body-bg-color;
+}
+
 .form-control:focus, .btn:focus-visible{
     box-shadow: unset;
+}
+
+
+h2{
+    font-size: 2em;
+    font-weight: 700;
+}
+
+p{
+    font-size: 16px;
 }

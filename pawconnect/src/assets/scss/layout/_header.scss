@@ -1,4 +1,6 @@
 .hero-nav{
+    border-bottom: 1px solid #eee;
+    padding-block: 1rem;
     .navbar-collapse{
         gap: 24px;
         text-align: center;
@@ -9,13 +11,13 @@
         .nav-link{
             font-weight: 500;
             padding: .5em 1em;
+
             &:hover{
                 color: $primary-color;
             }
             &.active{
-                font-weight: 700;
+                //font-weight: 700;
                 color: $primary-color;
-
             }
         }
     }

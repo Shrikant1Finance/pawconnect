@@ -1,0 +1,77 @@
+
+<div class="container light-gray mt-md-4">
+    <div class="heading-center">
+        <h2>Pet Health Check</h2>
+        <p>Monitor your pet's health and get expert advice</p>
+    </div>
+
+    <section class="uploadimage-section mb-4">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-10">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            <i class="fa-solid fa-camera"></i> AI Health Scanner
+                        </h5>
+                        <p>Upload a photo of your pet for AI-powered health analysis (eg: jpg, png)</p>
+
+                        <div class="file-container" *ngIf="!file">
+                            <span class="text-in-bg">Click to upload or drag and drop</span>
+                            <input type="file" (change)="getFiles($event)" class="file" accept="image/png,image/jpeg" />
+                        </div>
+                        
+                        <div class="file-priview" *ngIf="file">
+                            <img src="{{previewUrl}}" class="petImage" alt="" >
+                            <div class="file-info">
+                                File name : {{file.name}}
+                                <ng-select [items]="users"
+                                    bindLabel="name"
+                                    bindValue="id"
+                                    [addTag]="addCustomUser"
+                                    [multiple]="true"
+                                    placeholder="Select user or add custom tag"
+                                    [(ngModel)]="selectedUserIds">
+                            </ng-select>
+
+                            <p>
+                                Selected user: {{selectedUserIds}}
+                            </p>
+                                <button class="btn btn-outline-dark btn-close" (click)="file = undefined"></button> 
+                            </div>
+                        </div>
+
+                        <div class="d-flex justify-content-center mt-4">
+                            <button class="btn btn-block btn-primary px-5" (click)="uploadFile();" [disabled]="!file">Analyze Symptoms</button>
+                        </div>
+
+
+                        <div *ngIf="response; else loading">
+                            <h3>Upload Response:</h3>
+                            <pre>{{ response | json }}</pre>
+                        </div>
+                        
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+
+
+    <section class="health-report-container my-4">
+        <ng-template #loading >
+            <p>Loading...</p>
+        </ng-template>
+
+        .row
+    </section>
+
+  
+
+
+   
+
+    
+
+</div>
