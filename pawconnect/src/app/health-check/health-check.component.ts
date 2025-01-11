@@ -11,9 +11,14 @@ import { ApiService } from '../api.service';
 })
 export class HealthCheckComponent implements OnInit{
   file: any = null;
+  symptom: any = null;
   response: any;
   previewUrl: string | ArrayBuffer | null = null;
   data:any;
+
+  healthrecords = false;
+  isshowupload = true;
+
   cities2 = [
       {id: 1, name: 'Vilnius'},
       {id: 2, name: 'Kaunas'},
@@ -37,8 +42,8 @@ export class HealthCheckComponent implements OnInit{
   addCustomUser = (term: any) => ({id: term, name: term});
 
 
-  selectedCityId: number = 2;
-  selectedUserIds: number[] = [];
+
+  selectedUserIds: string[] = [];
 
   // constructor(private http: HttpClient) {} // Removed duplicate constructor
 
@@ -57,10 +62,11 @@ export class HealthCheckComponent implements OnInit{
 
   uploadFile(){
 
-    // let formData = new FormData();
-    // const file = event.target.files[0]; // Get the first selected file
 
     if (this.file) {
+      this.healthrecords = true;
+      this.isshowupload = false;
+      
       this.apiService.uploadFile(this.file).subscribe(
         (res) => {
           console.log('Upload Successful:', res);
@@ -68,24 +74,10 @@ export class HealthCheckComponent implements OnInit{
         },
         (err) => {
           console.error('Upload Failed:', err);
+          this.healthrecords = false;
         }
       );
     }
   }
 
-  // uploadFile(){
-  //   let formData = new FormData();
-  //   formData.append('file', this.file);
-
-  //   this.apiService.uploadFile(formData).subscribe((response) => {
-  //     console.log('API Response:', response);  
-  //   },
-  //   (err) => {
-  //     console.error('Error:', err);
-  //   });
-
-  //   // this.http.post('https://boring-sibelle-vedant11-72ca5d79.koyeb.app/upload', formData).subscribe((response) => {
-  //   //   console.log(response);
-  //   // });
-  // }
 }
